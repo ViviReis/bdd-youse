@@ -11,7 +11,7 @@
 -----------------------
 ##3 - Clone project##
     cd <your projects path>
-    git clone git@bitbucket.org:viviane_paula/bdd-carmen-web.git
+    git clone https://github.com/ViviReis/bdd-youse.git
 
 -----------------------
 ##4 - Install dependencies##
@@ -25,8 +25,11 @@
 ###5.1 - run all tests
     $ cucumber
 
-###5.2 - run tests validate fields
-    $ cucumber --tag @validate
+###5.2 - run tests My Account
+    $ cucumber --tag @myAccount
+   
+###5.2 - run tests Quotation
+    $ cucumber --tag @quotation
 
 ##6 - See the tests report in you browser
     <your bdd project path>/report/report.html
