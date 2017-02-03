@@ -1,0 +1,6 @@
+#default: --no-source --color --format html --out report/report.html
+#default: --no-source --color --format pretty --format html --out results.html --format csv --out reports.csv
+default: --no-source --color --format pretty --format html --out report/report.html
+#default: --format PrettyFace::Formatter::HTML --out result/index.html
+#default: --format PrettyFace::Formatter::HTML --out index.html
+#default: --no-source --color --format PrettyFace::Formatter::Html --out results/index.html
