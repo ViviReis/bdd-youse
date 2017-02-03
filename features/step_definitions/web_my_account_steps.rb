@@ -35,12 +35,13 @@ When(/^I fill in "([^"]*)"$/) do |field|
   @account.login(field)
   save_screenshot "#{Dir.pwd}/report/evidences/#{Time.now.strftime("D_%d_M_%m_Y_%Y__H_%H_M_%M_S_%S")}.png"
 end
-Then(/^I should see message "([^"]*)"$/) do |message|
-  assert_text(message)
-  save_screenshot "#{Dir.pwd}/report/evidences/#{Time.now.strftime("D_%d_M_%m_Y_%Y__H_%H_M_%M_S_%S")}.png"
-end
 
 When(/^I put mouse over "([^"]*)"$/) do |over|
   @account.mouseover(over)
+  save_screenshot "#{Dir.pwd}/report/evidences/#{Time.now.strftime("D_%d_M_%m_Y_%Y__H_%H_M_%M_S_%S")}.png"
+end
+
+Then(/^I should see message "([^"]*)"$/) do |message|
+  assert_text(message)
   save_screenshot "#{Dir.pwd}/report/evidences/#{Time.now.strftime("D_%d_M_%m_Y_%Y__H_%H_M_%M_S_%S")}.png"
 end

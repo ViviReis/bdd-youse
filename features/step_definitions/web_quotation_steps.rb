@@ -18,3 +18,8 @@ Then(/^I select "([^"]*)" in "([^"]*)"$/) do |value,type|
   @quotation.option(value,type)
   save_screenshot "#{Dir.pwd}/report/evidences/#{Time.now.strftime("D_%d_M_%m_Y_%Y__H_%H_M_%M_S_%S")}.png"
 end
+
+Then(/^I select "([^"]*)"$/) do |value|
+  @quotation.type(value)
+  save_screenshot "#{Dir.pwd}/report/evidences/#{Time.now.strftime("D_%d_M_%m_Y_%Y__H_%H_M_%M_S_%S")}.png"
+end

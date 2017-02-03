@@ -49,27 +49,13 @@ class WebMyAccountPage
     end
   end
 
-  def register_new()
-    @email = @random_user + '@teste.com.br'
-    @pass = @random_pass
-    CSV.open('CSV/user.csv', 'wb') do |csv|
-      csv << [@email,@pass]
-    end
-    find(:link, 'MINHA CONTA').click
-    assert_text('Para continuar, faça login ou registre-se.')
-    find(:link, 'Cadastre-se').click
-    find('#user_name').set('Vivi Teste')
-    find('#user_email').set(@email)
-    find('#user_password').set(@pass)
-    find('#user_password_confirmation').set(@pass)
-    find(:css,'input[name="commit"]').click
-  end
   def read_csv()
     CSV.foreach('CSV/user.csv') do |row|
       @user = row[0]
       @password = row[1]
     end
   end
+
   def register(field)
     @email = @random_user + '@teste.com.br'
     @pass = @random_pass
@@ -77,8 +63,6 @@ class WebMyAccountPage
       csv << [@email,@pass]
     end
     case field
-      when "Nome"
-        find('#user_name').set('Bruno Nogueira Bueno Spadafora')
       when "Email"
         find('#user_email').set(@email)
       when "Senha"

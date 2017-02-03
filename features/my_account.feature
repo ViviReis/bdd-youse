@@ -5,7 +5,7 @@ Feature: My Account
     Given I am on Youse
       And I click on "Minha Conta"
       And I click on "Cadastre-se"
-     When I fill in "Nome" field
+     When I fill in "Nome" with "Bruno Nogueira Bueno Spadafora"
       And I fill in "Email" field
       And I fill in "Senha" field
       And I fill in "Confirme sua senha" field
@@ -30,3 +30,19 @@ Feature: My Account
      When I put mouse over "Logout Header"
       And I click on "Sair"
      Then I should see message "Olá, somos a Youse"
+
+  @myAccount
+  Scenario Outline: User shouldn't be able to access products with invalid login information
+    Given I am on Youse
+      And I click on "Minha Conta"
+     When I fill in "Email" with "<username>"
+      And I click on "Próximo Passo"
+      And I fill in "Senha" with "<password>"
+      And I click on "Entrar"
+     Then I should see message "<message>"
+
+    Examples:
+      | username                   | password   |message                    |
+      |KmveeKlusMqcPWH@teste.com.br| 123456879ed|Email ou senha inválidos.  |
+      |blablablabla@blabla.com.br  | W8eYrmSl0n |Email ou senha inválidos.  |
+      |KmveeKlusMqcPWH@teste.com.br|            |Email ou senha inválidos.  |
