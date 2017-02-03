@@ -34,3 +34,7 @@
 ##6 - See the tests report in you browser
     <your bdd project path>/report/report.html
 -----------------------
+
+##7 - See the tests evidences
+    <your bdd project path>/report/evidences
+-----------------------
