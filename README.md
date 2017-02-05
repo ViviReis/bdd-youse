@@ -4,38 +4,33 @@
     $ curl -sSL https://get.rvm.io | bash -s stable
 
 -----------------------
-##2 - Install Selenium Standalone and ChromeWebDriver
-    cd <your bdd project path>/scripts
-    ./install.sh
-
------------------------
-##3 - Clone project##
+##2 - Clone project##
     cd <your projects path>
     git clone https://github.com/ViviReis/bdd-youse.git
 
 -----------------------
-##4 - Install dependencies##
-###4.1 - copy the settings of dependencias of the file settings Gemfile.lock to Gemfile
-###4.2 - gem bundler install
-###4.3 - bundle install
+##3 - Install dependencies##
+###3.1 - copy the settings of dependencias of the file settings Gemfile.lock to Gemfile
+###3.2 - gem bundler install
+###3.3 - bundle install
 
 -----------------------
-##5 - Run tests##
+##4 - Run tests##
 
-###5.1 - run all tests
+###4.1 - run all tests
     $ cucumber
 
-###5.2 - run tests My Account
+###4.2 - run tests My Account
     $ cucumber --tag @myAccount
    
-###5.2 - run tests Quotation
+###4.3 - run tests Quotation
     $ cucumber --tag @quotation
     
 -----------------------
-##6 - See the tests report in you browser
+##5 - See the tests report in you browser
     <your bdd project path>/report/report.html
 -----------------------
 
-##7 - See the tests evidences
+##6 - See the tests evidences
     <your bdd project path>/report/evidences
 -----------------------
