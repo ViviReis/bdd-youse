@@ -4,7 +4,7 @@
     $ curl -sSL https://get.rvm.io | bash -s stable
 
 -----------------------
-2 - Clone project##
+2 - Clone project
     cd <your projects path>
     git clone https://github.com/ViviReis/bdd-youse.git
 
