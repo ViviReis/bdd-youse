@@ -1,5 +1,5 @@
 -----------------------
-1 - Install Ruby Version Manager (RVM)##
+1 - Install Ruby Version Manager (RVM)
     $ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
     $ curl -sSL https://get.rvm.io | bash -s stable
 
@@ -9,7 +9,7 @@
     git clone https://github.com/ViviReis/bdd-youse.git
 
 -----------------------
-3 - Install dependencies##
+3 - Install dependencies
 3.1 - copy the settings of dependencias of the file settings Gemfile.lock to Gemfile
 3.2 - gem bundler install
 3.3 - bundle install
