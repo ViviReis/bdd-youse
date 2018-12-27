@@ -12,8 +12,11 @@
 
 -----------------------
 3 - Install dependencies
+
 3.1 - copy the settings of dependencias of the file settings Gemfile.lock to Gemfile
+
 3.2 - gem bundler install
+
 3.3 - bundle install
 
 -----------------------
